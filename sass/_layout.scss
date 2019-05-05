@@ -27,6 +27,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media only screen and (max-width: $bp-xsm) {
+    flex-wrap: wrap;
+    height: 11rem;
+    align-content: space-arounds;
+  }
 }
 
 .sidebar {
@@ -51,22 +56,31 @@
     padding: 3rem;
   }
 
-  .description {
-    background-color: #fff;
-    flex: 0 0 60%;
-    margin-right: 4.5rem;
-    box-shadow: var(--shadow-light);
-    padding: 3rem;
-    @media only screen and (max-width: $bp-med) {
-      padding: 2rem;
-      margin-right: 3rem;
-    }
+  @media only screen and (max-width: $bp-sm) {
+    flex-direction: column;
+  }
+}
+
+.description {
+  background-color: #fff;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  @media only screen and (max-width: $bp-med) {
+    padding: 2rem;
+    margin-right: 3rem;
   }
 
-  .user-reviews {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  @media only screen and (max-width: $bp-sm) {
+    margin-right: 0;
+    margin-bottom: 3rem;
   }
+}
+
+.user-reviews {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
